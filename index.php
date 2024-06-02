@@ -1,4 +1,4 @@
 <?php
-	echo "Hello 2nd time";
+	echo "Hello 3nd time";
 	echo phpinfo();
 ?>
