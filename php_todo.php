@@ -6,7 +6,9 @@ $todos = [];
 $nextId = 1;
 
 $method = $_SERVER['REQUEST_METHOD'];
-$request = explode('/', trim($_SERVER['PATH_INFO'], '/'));
+$pathInfo = $_SERVER['PATH_INFO'] ?? '';
+$request = explode('/', trim($pathInfo, '/'));
+$request = array_filter($request);
 
 switch ($method) {
     case 'GET':
